@@ -17,6 +17,7 @@ Router.map(function () {
       this.route("contributors"); //  /org/emberjs/ember.js/contributors
     });
   });
+  this.route("notfound", { path: "*path" });
 });
 
 export default Router;
