@@ -7,16 +7,21 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function () {
+  // LIST OF ORGS
   this.route("orgs"); //  /orgs
+
+  // INDIVIDUAL ORG
   this.route("org", { path: "org/:orgId" }, function () {
-    //  /org/emberjs
+    // LIST OF REPOS
     this.route("repos"); //  /org/repos
+
+    // INDIVIDUAL REPO
     this.route("repo", { path: ":repoId" }, function () {
-      //  /org/emberjs/ember.js
       this.route("issues"); //  /org/emberjs/ember.js/issues
       this.route("contributors"); //  /org/emberjs/ember.js/contributors
-    });
-  });
+    }); //  /org/emberjs/ember.js
+  }); //  /org/emberjs
+
   this.route("notfound", { path: "*path" });
 });
 
