@@ -17,7 +17,7 @@ module.exports = function (environment) {
       },
     },
     contentSecurityPolicy: {
-      "content-src": "https://api.github.com/*",
+      "connect-src": "https://api.github.com/*",
     },
     APP: {
       // Here you can pass flags/options to your application instance
