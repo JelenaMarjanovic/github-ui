@@ -2,9 +2,8 @@ import Ember from "ember";
 import $ from "jquery";
 
 export default Ember.Route.extend({
-  // eslint-disable-next-line no-unused-vars
-  model(params) {
-    let orgId = Ember.get(this.modelFor("org"), "id");
+  model() {
+    let orgId = Ember.get(this.modelFor("org"), "login");
 
     return $.get(`https://api.github.com/orgs/${orgId}/repos`).then(
       (rawRepos) => {
