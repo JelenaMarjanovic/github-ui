@@ -8,25 +8,30 @@ export default Ember.Route.extend({
     },
   },
   model() {
-    return [
-      {
-        id: "emberjs",
-      },
-      {
-        id: "ember-cli",
-      },
-      {
-        id: "microsoft",
-      },
-      {
-        id: "yahoo",
-      },
-      {
-        id: "netflix",
-      },
-      {
-        id: "facebook",
-      },
-    ];
+    // eslint-disable-next-line no-unused-vars
+    return new Ember.RSVP.Promise((resolve, reject) => {
+      Ember.run.later(() => {
+        resolve([
+          {
+            id: "emberjs",
+          },
+          {
+            id: "ember-cli",
+          },
+          {
+            id: "microsoft",
+          },
+          {
+            id: "yahoo",
+          },
+          {
+            id: "netflix",
+          },
+          {
+            id: "facebook",
+          },
+        ]);
+      }, 1000);
+    });
   },
 });
