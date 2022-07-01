@@ -10,12 +10,7 @@ export default Ember.Route.extend({
         // Use the name of the repo as our ID
         rawOrg.id = rawOrg.name;
 
-        // eslint-disable-next-line no-unused-vars
-        return new Ember.RSVP.Promise((resolve, reject) => {
-          Ember.run.later(() => {
-            resolve(rawOrg);
-          }, 1000);
-        });
+        return rawOrg;
       }
     );
   },
