@@ -20,6 +20,7 @@ Router.map(function () {
       this.route("issues"); //  /org/emberjs/ember.js/issues
       this.route("contributors"); //  /org/emberjs/ember.js/contributors
     }); //  /org/emberjs/ember.js
+    this.route('notfound');
   }); //  /org/emberjs
 
   this.route("notfound", { path: "*path" });
