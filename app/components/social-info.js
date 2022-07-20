@@ -5,6 +5,7 @@ export default Ember.Component.extend({
   actions: {
     toggleLinkSection() {
       this.toggleProperty("isExpanded");
+      this.sendAction("on-links-toggle");
     },
   },
 });

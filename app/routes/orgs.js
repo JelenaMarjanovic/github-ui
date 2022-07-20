@@ -6,6 +6,10 @@ export default Ember.Route.extend({
     favoriteClicked(org) {
       this.get("favorites").favoriteItem(org);
     },
+    linksToggled() {
+      // eslint-disable-next-line no-console
+      console.log("TOGGLED");
+    },
   },
   model() {
     return [
