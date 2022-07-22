@@ -11,5 +11,10 @@ test("it renders", function (assert) {
 
   this.render(hbs`{{github-org}}`);
 
-  assert.equal(this.$().text().trim(), "[ Favorite ]");
+  assert.equal(
+    this.$().text().trim(),
+    `[
+  Favorite
+  ]`
+  );
 });
