@@ -6,7 +6,7 @@ export default Ember.Route.extend({
     let org = this.modelFor("org");
 
     return $.get(
-      `https://api.github.com/repos/${org.id}/${params.repoId}`
+      `https://api.github.com/repos/${org.login}/${params.repoId}`
     ).then((rawRepo) => {
       // Backing up GitHub's numeric ID
       rawRepo.oldId = rawRepo.id;
