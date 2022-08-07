@@ -6,6 +6,8 @@ export default Ember.Component.extend({
 
   favorites: Ember.inject.service(),
 
+  classNames: ["github-org"],
+
   isFavorited: isInArray("org", "favorites.items"),
 
   actions: {
