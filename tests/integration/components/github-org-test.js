@@ -6,6 +6,8 @@ moduleForComponent("github-org", "Integration | Component | github org", {
 });
 
 test("it renders", function (assert) {
+  assert.expect(2);
+
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
@@ -15,6 +17,22 @@ test("it renders", function (assert) {
     this.$().text().trim(),
     `[
   Favorite
-  ]`
+  ]`,
+    "Inline syntax, basic rendering"
+  );
+
+  // Template block usage:
+  this.render(hbs`
+    {{#github-org}}
+      template block text
+    {{/github-org}}
+  `);
+
+  assert.equal(
+    this.$().text().trim(),
+    `[
+  Favorite
+  ]`,
+    "Block syntax, basic rendering"
   );
 });
